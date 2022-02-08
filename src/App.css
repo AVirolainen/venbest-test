@@ -1,38 +1,80 @@
-.App {
+.App{
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  width: 1200px;
+  margin: 0 auto
+}
+
+.appHeader{
+  width: 100%;
   text-align: center;
+  font-size: 45px;
+  text-transform: uppercase;
+  margin: 15px 0
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.searchBox{
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+.nameSearch,
+.ageSearch{
+  height: 35px;
+  width: 270px;
+  border-radius: 25px;
+  border: 2px solid #808080;
+  padding: 0 15px;
+  background: url(./assets/search.png) no-repeat;
+  background-size: contain;
+  background-position: 98% ;
+  margin: 15px 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.ageSearch{
+  border-radius: 0;
+  background: none;
+  width: 120px
+}
+
+.nameSearch:focus,
+.ageSearch:focus{
+  outline: none
+}
+
+.nameSearch::placeholder,
+.ageSearch::placeholder{
+  font-family: 'Montserrat', sans-serif;  
+}
+
+.checkboxContainer{
+  width: 230px;
+  display: flex;
+  justify-content: space-between
+}
+
+label{
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container{
+    width: 95%;
+    margin: 0 auto
   }
-  to {
-    transform: rotate(360deg);
+  .checkboxContainer{
+    margin: 0 auto;
+    margin-top: 25px
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .searchBox{
+    flex-direction: column;
   }
 }

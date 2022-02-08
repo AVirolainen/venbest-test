@@ -1,0 +1,36 @@
+.userCard{
+	width: 700px;
+	margin: 0 auto
+}
+
+.cardComponent{
+	margin: 20px 0
+}
+
+.avatarContainer{
+	width: 20%;
+	display: flex;
+	justify-content: center
+}
+
+.cardInner{
+	display: flex;
+}
+
+.infoContainer{
+	width: 80%;
+	padding-left: 30px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	font-size: 18px
+}
+
+@media screen and (max-width: 975px) {
+  .userCard{
+    width: 100%
+  }
+  .avatarContainer{
+  	min-width: 120px;
+  }
+}
